@@ -69,39 +69,48 @@ The application provides three types of filters to explore the data:
 
 The data file `trips_2015-week02_final_clean.csv` (431MB) is required to run this application.
 
-### Download Instructions
+### Download Options
 
-1. **Download from Google Drive:**
-   - [Download Data File](https://drive.google.com/uc?export=download&id=YOUR_FILE_ID) 
-   - **Note:** Replace `YOUR_FILE_ID` with the actual Google Drive file ID after uploading the file.
-   
-2. **Using command line (alternative):**
-   ```bash
-   wget --no-check-certificate 'https://drive.google.com/uc?export=download&id=YOUR_FILE_ID' -O trips_2015-week02_final_clean.csv
-   ```
-   
-   Or using curl:
-   ```bash
-   curl -L 'https://drive.google.com/uc?export=download&id=YOUR_FILE_ID' -o trips_2015-week02_final_clean.csv
-   ```
+You can download the data file from the following sources:
 
-3. **Place the file:**
+1. **Google Drive (Recommended):**
+   - [Download from Google Drive Folder](https://drive.google.com/drive/folders/110OsnwhdQOtS_ifV-ETxXx4GtfaBaFTZ?usp=share_link)
+   - Contains: `app.R`, `README.md`, and `trips_2015-week02_final_clean.csv`
+   - File size: 431.2 MB
+   - **This is the processed dataset containing one week of data (week 02, 2015)**
+   - **This is the exact dataset used by this application**
+   - Simply download the CSV file from the folder
+
+2. **Kaggle Dataset:**
+   - [NYC Yellow Taxi Trip Data on Kaggle](https://www.kaggle.com/datasets/elemento/nyc-yellow-taxi-trip-data)
+   - Original full dataset source (contains data for the entire year 2015)
+   - **Note:** The Kaggle dataset is much larger as it contains the complete dataset for the entire year
+   - **Our application uses only one week of data (week 02), which is available in the Google Drive folder above**
+   - If you download from Kaggle, you will need to extract and process the data for week 02 to match the format used by this application
+
+### Setup Instructions
+
+1. **Download the data file:**
+   - **Recommended:** Download from Google Drive (this is the exact dataset used by the application - one week of processed data)
+   - **Alternative:** Download from Kaggle if you want the full dataset (requires processing to extract week 02 data)
+   - Download `trips_2015-week02_final_clean.csv`
+
+2. **Place the file:**
    - Save the file in the same directory as `app.R`
    - The file should be named exactly: `trips_2015-week02_final_clean.csv`
 
-4. **Verify the file:**
+3. **Verify the file:**
    - File size should be approximately 431MB
    - File should be in CSV format
 
-**How to get the Google Drive file ID:**
-1. Upload the file to Google Drive
-2. Right-click the file and select "Get link" or "Share"
-3. Set permissions to "Anyone with the link can view"
-4. Copy the link: `https://drive.google.com/file/d/FILE_ID/view?usp=sharing`
-5. Extract the `FILE_ID` (the string between `/d/` and `/view`)
-6. Replace `YOUR_FILE_ID` in the download link above
+### Alternative: Command Line Download
 
-For detailed instructions, see [GOOGLE_DRIVE_GUIDE.md](GOOGLE_DRIVE_GUIDE.md)
+If you prefer using command line to download from Google Drive, you can use:
+
+```bash
+# Note: For folder downloads, you may need to download individual files
+# Visit the Google Drive folder link above and download the CSV file manually
+```
 
 ## Installation
 
